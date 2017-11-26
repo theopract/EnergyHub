@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+}
+
+html,
+body {
+    height: 98%;
+    margin: 4px;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 360px 1fr 360px;
+    grid-template-rows: 60px 50%;
+    grid-gap: 10px;
+    height: 100%;
+    grid-template-areas:
+        "top_panel  top_panel   top_panel" 
+        "left_panel chart_panel right_panel" 
+        "left_panel .           right_panel";
+    
+    justify-content: center;
+    align-content: stretch;
+    
+}
+
+.top_panel {
+    grid-area: top_panel;
+}
+
+.left_panel {
+    grid-area: left_panel;
+}
+
+.chart_panel {
+    grid-area: chart_panel;
+}
+
+.right_panel {
+    grid-area: right_panel;
+}
+
+.grid div {
+    border: 1px solid rgb(0, 95, 107);
+    border-radius: 5px;
+    background-color: rgba(0, 95, 107, 0.6);
+    padding: 0.2em;
+    color: white;
+    text-align: center;
+    font-size: 36px;
+    padding: 25px;
+}
+
+div .panels.top_panel {
+    background-color: rgba(52, 25, 173, 0.6);
+    border: 1px solid rgb(52, 25, 173);
+    padding: 3px;
+}
+
+div .panels.left_panel {
+    background-color: rgba(204, 190, 0, 0.6);
+    border: 1px solid rgb(204, 190, 0);
+}
+
+div .panels.right_panel {
+    background-color: rgba(0, 204, 61, 0.6);
+    border: 1px solid rgb(0, 204, 61);
+}
